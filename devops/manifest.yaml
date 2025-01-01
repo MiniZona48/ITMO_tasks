@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web # Имя Deployment
+  labels:
+    app: my-app
+spec:
+  replicas: 2 # Количество реплик (подов)
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container # Имя контейнера
+        image: minizona48/web_app:1.0.0 # Docker-образ
+        ports:
+        - containerPort: 8000 # Порт, который открывается внутри контейнера
+        livenessProbe:
+            httpGet:
+              path: /hello.html
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 3

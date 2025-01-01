@@ -1,0 +1,20 @@
+# Используем базовый образ python:3-alpine
+FROM python:3-alpine
+
+# Создаем каталог /app и назначаем его рабочей директорией
+WORKDIR /app
+
+# Добавляем файл hello.html с содержимым "Hello world"
+RUN echo "Hello, world! This is Web app" > hello.html
+
+# Создаем пользователя с uid 1001
+RUN adduser -D -u 1001 appuser
+
+# Меняем владельца каталога /app на пользователя с uid 1001
+RUN chown -R appuser:appuser /app
+
+# Переходим на выполнение от имени созданного пользователя
+USER appuser
+
+# Указываем команду для запуска веб-сервера
+CMD ["python", "-m", "http.server", "8000"]
