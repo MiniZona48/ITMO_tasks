@@ -13,7 +13,7 @@
 
 4) Проверил работоспособность с помощью команды "docker run -p 8000:8000 -it web_app:1.0.0" и перехода по ссылке <http://localhost:8000/hello.html>
 
-![Проверка работы образа](/images/test_docker.jpg)
+![Проверка работы образа](/devops/images/test_docker.jpg)
 
 5) Загрузил образ на Docker Hub с помощью команды "docker push web_app:1.0.0"
 
@@ -21,25 +21,25 @@
 
 7) Установил manifest в кластер kubernetes с помощью команды "kubectl apply -f manifest_path", где вместо manifest_path должен быть указан разработанный yaml файл Kubernetes Deployment manifest.
 
-![Установка манифеста](/images/apply.jpg)
+![Установка манифеста](/devops/images/apply.jpg)
 
-![Получение списка деплойментов](/images/get_depl.jpg)
+![Получение списка деплойментов](/devops/images/get_depl.jpg)
 
-![Получение списка подов](/images/get_pods.jpg)
+![Получение списка подов](/devops/images/get_pods.jpg)
 
-![Проброска портов](/images/port_forward.jpg)
+![Проброска портов](/devops/images/port_forward.jpg)
 
-![Проверка деплоймента](/images/test_dep.jpg)
+![Проверка деплоймента](/devops/images/test_dep.jpg)
 
 8) Разработал Service NodePort для Deployment (ссылка), который в теории должен открываться на "http://<Node Ip>:<Node port>/hello.html". Манифест применялся с помощью команды "kubectl create -f path"
 
-![Описание деплоймента](/images/describe_dep.jpg)
+![Описание деплоймента](/devops/images/describe_dep.jpg)
 
-![Описание узла](/images/describe_node.jpg)
+![Описание узла](/devops/images/describe_node.jpg)
 
-![Описание сервиса](/images/describe_service.jpg)
+![Описание сервиса](/devops/images/describe_service.jpg)
 
-![Проброска сервиса](/images/test_service.jpg)
+![Проброска сервиса](/devops/images/test_service.jpg)
 
 Источники:
 
