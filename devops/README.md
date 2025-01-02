@@ -2,7 +2,7 @@
 Ход работы:
 
 1) Установил Docker, Kubectl, Minikube
-2) Разработал [Dockerfile](/devops/Dockerfile), который включает в себя следующее:
+2) Разработал [Dockerfile](/devops/DockerFile), который включает в себя следующее:
 
 - Создается на основе python:3-alpine;
 - Создается каталог /app;
