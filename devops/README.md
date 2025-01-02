@@ -31,7 +31,7 @@
 
 ![Проверка деплоймента](/devops/images/test_dep.jpg)
 
-8) Разработал [Service NodePort](/devops/service_web.yaml) для Deployment, который в теории должен открываться на "http://<Node Ip>:<Node port>/hello.html". Манифест применялся с помощью команды "kubectl create -f path"
+8) Разработал [Service NodePort](/devops/service_web.yml) для Deployment, который в теории должен открываться на "http://<Node Ip>:<Node port>/hello.html". Манифест применялся с помощью команды "kubectl create -f path"
 
 ![Описание деплоймента](/devops/images/describe_dep.jpg)
 
