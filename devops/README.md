@@ -2,7 +2,7 @@
 Ход работы:
 
 1) Установил Docker, Kubectl, Minikube
-2) Разработал Dockerfile [ссылка](/devops/Dockerfile), который включает в себя следующее:
+2) Разработал [Dockerfile](/devops/Dockerfile), который включает в себя следующее:
 
 - Создается на основе python:3-alpine;
 - Создается каталог /app;
@@ -17,7 +17,7 @@
 
 5) Загрузил образ на Docker Hub с помощью команды "docker push web_app:1.0.0"
 
-6) Разработал Kubernetes Deployment manifest с 2 репликами и LivenessProde. (ссылка)
+6) Разработал [Kubernetes Deployment manifest](/devops/manifest.yaml) с 2 репликами и LivenessProde.
 
 7) Установил manifest в кластер kubernetes с помощью команды "kubectl apply -f manifest_path", где вместо manifest_path должен быть указан разработанный yaml файл Kubernetes Deployment manifest.
 
@@ -31,7 +31,7 @@
 
 ![Проверка деплоймента](/devops/images/test_dep.jpg)
 
-8) Разработал Service NodePort для Deployment (ссылка), который в теории должен открываться на "http://<Node Ip>:<Node port>/hello.html". Манифест применялся с помощью команды "kubectl create -f path"
+8) Разработал [Service NodePort](/devops/service_web.yaml) для Deployment, который в теории должен открываться на "http://<Node Ip>:<Node port>/hello.html". Манифест применялся с помощью команды "kubectl create -f path"
 
 ![Описание деплоймента](/devops/images/describe_dep.jpg)
 
