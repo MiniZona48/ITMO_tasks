@@ -13,7 +13,7 @@
 
 4) Проверил работоспособность с помощью команды "docker run -p 8000:8000 -it web_app:1.0.0" и перехода по ссылке <http://localhost:8000/hello.html>
 
-![Проверка работы образа](/images/test_docker.jpg)
+![Проверка работы образа](/devops/images/test_docker.jpg)
 
 5) Загрузил образ на Docker Hub с помощью команды "docker push web_app:1.0.0"
 
